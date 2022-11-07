@@ -40,4 +40,10 @@ class HomeFontStylesDark {
     fontSize: 12.sp,
     color: Color(0xffffffff),
   );
+
+  static TextStyle profileTile = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 12.sp,
+    color: Color(0xffffffff),
+  );
 }

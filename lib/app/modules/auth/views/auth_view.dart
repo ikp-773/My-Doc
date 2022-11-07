@@ -1,4 +1,5 @@
 import 'package:basic/app/modules/auth/views/login_view.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -50,10 +51,36 @@ class AuthView extends GetView<AuthController> {
             ),
             SizedBox(height: 30.h),
             SizedBox(
-              width: 223.w,
-              child: const AuthTextField(
-                hintText: 'Gender',
-                keyboardType: TextInputType.name,
+              width: 200.w,
+              child: Obx(
+                () => DropdownButtonHideUnderline(
+                  child: DropdownButton2(
+                    hint: Text('Gender',
+                        style: AuthFontStylesDark.authTextFieldHint),
+                    items: controller.genderList
+                        .map((item) => DropdownMenuItem<String>(
+                              value: item,
+                              child: Text(item,
+                                  style: AuthFontStylesDark.authTextField),
+                            ))
+                        .toList(),
+                    value: controller.dropdownValue.value,
+                    onChanged: (value) {
+                      controller.setSelected(value.toString());
+                    },
+                    buttonHeight: 40.h,
+                    buttonWidth: 200.w,
+                    itemHeight: 40.h,
+                    dropdownMaxHeight: 200.h,
+                    dropdownWidth: 200.w,
+                    dropdownPadding: null,
+                    dropdownDecoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      color: ThemeDark.otpBoxColor,
+                    ),
+                    dropdownElevation: 8,
+                  ),
+                ),
               ),
             ),
             SizedBox(height: 30.h),
@@ -108,14 +135,17 @@ class AuthTextField extends StatelessWidget {
     Key? key,
     required this.hintText,
     required this.keyboardType,
+    this.isEnabled = true,
   }) : super(key: key);
 
   final String hintText;
+  final bool isEnabled;
   final TextInputType keyboardType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: null,
+      enabled: isEnabled,
       keyboardType: keyboardType,
       textCapitalization: TextCapitalization.words,
       style: AuthFontStylesDark.authTextField,
