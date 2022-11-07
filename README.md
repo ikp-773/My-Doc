@@ -1,4 +1,4 @@
-# ConnectO
+# MyDoc
 
 ![](https://img.shields.io/badge/CONTRIBUTORS-4-brightgreen?color=green&style=for-the-badge) 
 ![](https://img.shields.io/github/languages/top/ikp-773/My-Doc?style=for-the-badge) 
