@@ -24,16 +24,12 @@ Hash Vash
 ## Product Pitch
 
 [Presentation](https://www.canva.com/design/DAFRIvGzPEo/y03rSp-Ur2hw0sdFmRhd1A/view?utm_content=DAFRIvGzPEo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
-
+[Application Demo](https://www.youtube.com/watch?v=A3QncBKce7w)
 
 ## Problems Faced
 
-Challenges we ran into
-✅ Backend End Creation: None of us had much idea of backend so we took help from mentor and studied flask. But we still couldn't stucture the whole backend and create all API's.
-
-✅ Data Handling: Data transfer via the backend to the app was difficult.
-
+- Backend End Creation: None of us had much idea of backend so we took help from mentor and studied flask. But we still couldn't stucture the whole backend and create all API's.
+- Data Handling: Data transfer via the backend to the app was difficult.
 
 
 ## Libraries used
